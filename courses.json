@@ -1,0 +1,20 @@
+[
+	{
+		"major": "Computer Science and Engineering",
+		"majorcode": "CSE",
+		"coursenumber" : "3",
+		"coursename" : "Fluency/Information Technology"
+	},
+	{
+		"major": "Computer Science and Engineering",
+		"majorcode": "CSE",
+		"coursenumber" : "7",
+		"coursename" : "Intro Programming MATLAB"
+	},
+	{
+		"major": "Computer Science and Engineering",
+		"majorcode": "CSE",
+		"coursenumber" : "8A",
+		"coursename" : "Intro/Computer Sci: Java(I)"
+	}
+]
