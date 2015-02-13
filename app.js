@@ -39,7 +39,7 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/', index.view);
+app.get('/index', index.view);
 app.get('/resources', resources.addFriend);
 app.get('/share', share.addFriend);
 app.get('/preview', preview.addFriend);
