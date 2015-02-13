@@ -7,3 +7,8 @@ exports.addFriend = function(req, res) {
     data["friends"].push({name: x, description: y, imageURL: z});
     res.render('preview');
 }
+
+exports.view = function(req, res){
+	console.log(data);
+	res.render('preview');
+};

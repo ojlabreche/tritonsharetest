@@ -12,6 +12,9 @@ var index = require('./routes/index');
 var resources = require('./routes/resources');
 var share = require('./routes/share');
 var preview = require('./routes/preview');
+var about = require('./routes/about');
+var submitted = require('./routes/submitted');
+var example = require('./routes/example');
 
 // Example route
 // var user = require('./routes/user');
@@ -39,10 +42,13 @@ if ('development' == app.get('env')) {
 }
 
 // Add routes here
-app.get('/index', index.view);
-app.get('/resources', resources.addFriend);
-app.get('/share', share.addFriend);
-app.get('/preview', preview.addFriend);
+app.get('/', index.view);
+app.get('/resources', resources.view);
+app.get('/share', share.view);
+app.get('/preview', preview.view);
+app.get('/about', about.view);
+app.get('/submitted', submitted.view);
+app.get('/example', example.view);
 // Example route
 // app.get('/users', user.list);
 

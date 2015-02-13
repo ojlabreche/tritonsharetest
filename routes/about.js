@@ -10,5 +10,5 @@ exports.addFriend = function(req, res) {
 
 exports.view = function(req, res){
 	console.log(data);
-	res.render('resources');
+	res.render('about');
 };
