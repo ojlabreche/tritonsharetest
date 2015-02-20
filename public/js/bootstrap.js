@@ -2004,3 +2004,36 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
   })
 
 }(jQuery);
+
+
+// upload file stuff
+//==================
+WL.ui({
+    name: "skydrivepicker",
+    element: "uploadFile_div",
+    mode: "save",
+    onselected: onUploadFileCompleted,
+    onerror: onUploadFileError
+});
+
+function onUploadFileCompleted(response) {
+    WL.upload({
+        path: response.data.folders[0].id,
+        element: "file",
+        overwrite: "rename"
+    }).then(
+        function (response) {
+            document.getElementById("info").innerText = 
+                "File uploaded."; 
+        },
+        function (responseFailed) {
+            document.getElementById("info").innerText =
+                "Error uploading file: " + responseFailed.error.message;
+        }
+    );
+};
+
+function onUploadFileError(response) {
+    document.getElementById("info").innerText =
+        "Error getting folder info: " + response.error.message; 
+}
